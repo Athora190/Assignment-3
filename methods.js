@@ -143,4 +143,22 @@ console.log(Includes(arr5, ToFind, "fun"));
 
 //method seven .indexOf()
 
-function ElementSearch(element, index) {}
+function ElementSearch(element, index) {
+  if (element === index) {
+    return index;
+  } else {
+    return -1;
+  }
+}
+function indexOf(arr, func, char) {
+  let val;
+  for (let i = 0; i < arr.length; i++) {
+    val = func(arr[i], char);
+    return i;
+  }
+}
+console.log(indexOf(arr5, ElementSearch, "bunny"));
+
+//method eight .push()
+arr6 = {};
+function push(arr, element, length) {}
