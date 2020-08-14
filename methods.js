@@ -176,7 +176,7 @@ function push(arr, element) {
   return arr.length;
 }
 console.log(push(arr6, 3));
-//method .lastIndexOf()
+//method nine .lastIndexOf()
 function lastIndexOf(arr, element) {
   let val;
   console.log(arr);
@@ -189,13 +189,50 @@ function lastIndexOf(arr, element) {
 }
 console.log(lastIndexOf(arr6, 2));
 
-//method nine Object.key()
-arr7 = ["abc"];
-function Key(arr) {
-  let index;
-  for (let i = 0; i < arr.length; i++) {
-    index = forEach(i);
+//method ten Object.key()
+let text = { d: "adg", f: "log" };
+function ObjectKey(object) {
+  let arr = [];
+  for (let key in object) {
+    arr.push(key);
   }
-  return index;
+  return arr;
 }
-console.log(Key(arr7));
+console.log(ObjectKey(text));
+
+//method eleven object.value()
+function objectvalue(object) {
+  let arr = [];
+  for (let key in object) {
+    arr.push(object[key]);
+  }
+  return arr;
+}
+console.log(objectvalue(text));
+
+//method tweleve .every()
+let arr7 = [100, 43, 295, 111];
+function isLessThen(value) {
+  if (value < 100) {
+    return true;
+  } else {
+    return false;
+  }
+}
+function isGreaterThen(value) {
+  if (value > 100) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function Every(arr, func) {
+  let result;
+  let solution;
+  for (let i = 0; i < arr.length; i++) {
+    result = func(arr[i]);
+  }
+  return result;
+}
+console.log(Every(arr7, isGreaterThen));
