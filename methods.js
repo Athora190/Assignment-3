@@ -1,8 +1,9 @@
 //method one .foreach()
 let items = [1, 2, 3, 4, 5];
 function forEach(items) {
+  let num;
   for (let i = 0; i < items.length; i++) {
-    let num = items[i];
+    num = items[i];
     console.log(num);
   }
 }
@@ -60,6 +61,8 @@ console.log(filter(arr2, lessThen));
 
 // method four .some()
 let arr3 = [3, 6, 7, 2, 11];
+
+// function callback(element)
 //checks if even
 function IsEven(num) {
   if (num % 2 === 0) {
@@ -143,22 +146,56 @@ console.log(Includes(arr5, ToFind, "fun"));
 
 //method seven .indexOf()
 
-function ElementSearch(element, index) {
-  if (element === index) {
-    return index;
-  } else {
-    return -1;
-  }
-}
-function indexOf(arr, func, char) {
+// function ElementSearch(element, index) {
+//   if (element === index) {
+//     return index;
+//   } else {
+//     return -1;
+//   }
+// }
+function indexOf(arr, char) {
   let val;
   for (let i = 0; i < arr.length; i++) {
-    val = func(arr[i], char);
-    return i;
+    val = arr[i];
+    if (val == char) {
+      return i;
+    }
   }
+  return -1;
 }
-console.log(indexOf(arr5, ElementSearch, "bunny"));
+console.log(indexOf(arr5, "done"));
 
 //method eight .push()
-arr6 = {};
-function push(arr, element, length) {}
+let arr6 = [1, 2, 3, 4];
+function push(arr, element) {
+  // let end = arr.length - 1; // repesents the last index
+  // let h = arr[end + 1]; // the value in array
+  // return the array and added value  [1,2,3,4,3]
+  arr[arr.length] = element;
+  // arr[h] = element;
+  return arr.length;
+}
+console.log(push(arr6, 3));
+//method .lastIndexOf()
+function lastIndexOf(arr, element) {
+  let val;
+  console.log(arr);
+  for (let i = arr.length - 1; i >= 0; i--) {
+    val = arr[i];
+    if (val == element) {
+      return i;
+    }
+  }
+}
+console.log(lastIndexOf(arr6, 2));
+
+//method nine Object.key()
+arr7 = ["abc"];
+function Key(arr) {
+  let index;
+  for (let i = 0; i < arr.length; i++) {
+    index = forEach(i);
+  }
+  return index;
+}
+console.log(Key(arr7));
