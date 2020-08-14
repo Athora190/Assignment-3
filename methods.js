@@ -4,10 +4,10 @@ function forEach(items) {
   let num;
   for (let i = 0; i < items.length; i++) {
     num = items[i];
-    console.log(num);
   }
+  return num;
 }
-forEach(items);
+console.log(forEach(items));
 
 //method two .map()
 let arr1 = [1, 2, 3, 4, 5];
