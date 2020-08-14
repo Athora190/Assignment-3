@@ -62,7 +62,6 @@ console.log(filter(arr2, lessThen));
 let arr3 = [3, 6, 7, 2, 11];
 //checks if even
 function IsEven(num) {
-  console.log(num);
   if (num % 2 === 0) {
     return true;
   } else {
@@ -93,3 +92,55 @@ function Some(arr, func) {
 }
 
 console.log(Some(arr3, IsOdd));
+
+//method five .reduce()
+let arr4 = [1, 2, 3, 4, 5];
+// let foc;
+// let sum;
+// function Sum(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     foc = arr[i];
+//     sum = foc + arr[i + 1];
+//   }
+//   return sum;
+// }
+// console.log(Sum(arr4));
+function rSum(accu, num) {
+  return accu + num;
+}
+function rProduct(accu, num) {
+  return accu * num;
+}
+function reduce(arr, func, init) {
+  let total = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    total = func(total, arr[i]);
+  }
+  // if(init === undefined)
+  // {
+
+  // }
+  return total;
+}
+console.log(reduce(arr4, rSum));
+//method six .includes()
+let arr5 = ["bunny", "turtle", "fun"];
+function ToFind(val, char) {
+  if (val == char) {
+    return true;
+  } else {
+    return false;
+  }
+}
+function Includes(arr, func, x) {
+  let found;
+  for (let i = 0; i < arr.length; i++) {
+    found = func(arr[i], x);
+  }
+  return found;
+}
+console.log(Includes(arr5, ToFind, "fun"));
+
+//method seven .indexOf()
+
+function ElementSearch(element, index) {}
